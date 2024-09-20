@@ -1,0 +1,12 @@
+-- up
+CREATE TABLE `categories` (
+    `id` VARCHAR(255),
+    `name` VARCHAR(255) NOT NULL,
+    `parent` VARCHAR(255),
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+);
+
+-- down
+DROP TABLE `categories`;
